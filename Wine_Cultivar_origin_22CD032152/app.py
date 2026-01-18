@@ -5,8 +5,8 @@ import joblib
 app = Flask(__name__)
 
 # Load model and scaler
-model = joblib.load(r"C:\Users\HP\Downloads\Wine_Cultivar_origin_22CD032152\model\wine_cultivar_model.pkl")
-scaler = joblib.load(r"C:\Users\HP\Downloads\Wine_Cultivar_origin_22CD032152\model\scaler.pkl")
+model = joblib.load("model/wine_cultivar_model.pkl")
+scaler = joblib.load("model/scaler.pkl")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
